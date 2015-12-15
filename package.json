@@ -1,0 +1,26 @@
+{
+  "name": "geradorDeLeroLero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filiperoberto/geradorDeLeroLero.git"
+  },
+  "keywords": [
+    "lerolero"
+  ],
+  "author": "Filipe Roberto Silva",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/filiperoberto/geradorDeLeroLero/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-sass": "~2.1.1",
+    "browser-sync": "~2.10.0"
+  }
+}
