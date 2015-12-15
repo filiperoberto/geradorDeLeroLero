@@ -1,6 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
+var gulpif = require('gulp-if');
+var  minifyCss = require('gulp-minify-css');
 
 var scss_dir = 'app/scss/**/*.scss';
 
@@ -25,4 +29,12 @@ gulp.task('browserSync',function(){
 			baseDir:'app'
 		}
 	})
-})
+});
+
+gulp.task('useref',function(){
+	return gulp.src('app/*.html')
+		.pipe(useref())
+		.pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+		.pipe(gulp.dest('dist'))
+});
